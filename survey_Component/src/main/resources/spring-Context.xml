@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+
+	<context:component-scan base-package="com.fire.survey.component">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
 
 	<context:property-placeholder location="classpath:db.properties" />
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -11,11 +21,34 @@
 		<property name="jdbcUrl" value="${jdbc.url}" />
 		<property name="driverClass" value="${jdbc.driverClass}" />
 	</bean>
-	<bean id="localSessionFactoryBean"
+	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocations" value="classpath:hibernate.cfg.xml" />
-		<property name="mappingLocations" value="com/fire/entites/*.hbm.xml"></property>
+		<property name="mappingLocations"
+			value="classpath:com/fire/survey/entities/*/*.hbm.xml" />
 	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<aop:config>
+		<aop:pointcut
+			expression="execution(* com.fire.survey.component.service.*..*Service(..))"
+			id="myPoint" />
+
+	</aop:config>
+
+	<tx:advice id="myAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="login" read-only="true" />
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="*" propagation="REQUIRES_NEW"
+				rollback-for="java.lang.Exception" />
+		</tx:attributes>
+	</tx:advice>
 
 </beans>

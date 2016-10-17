@@ -1,15 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2016-10-14 16:35:23 by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 2016-10-17 11:45:50 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-	<class name="com.fire.entites.EmployeeTemp" table="TEMP_EMPLOYEE">
+	<class name="com.fire.survey.entities.guest.User" table="GUEST_USER">
 		<id name="id" type="java.lang.Integer">
 			<column name="ID" />
 			<generator class="native" />
 		</id>
 		<property name="name" type="java.lang.String">
 			<column name="NAME" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="PASSWORD" />
+		</property>
+		<property name="company" type="boolean">
+			<column name="COMPANY" />
 		</property>
 	</class>
 </hibernate-mapping>
