@@ -35,6 +35,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		if (request.getSession().getAttribute(ConstanName.LOGIN_USER) != null) {
 			return true;
 		}
+		request.setAttribute("message", "请登录后在进行操作！");
+		request.getRequestDispatcher("/WEB-INF/guest/user_login.jsp").forward(request, response);
 		return false;
 	}
 }

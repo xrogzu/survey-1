@@ -1,0 +1,2102 @@
+﻿/*============================默认样式：直接定义元素的样式=======================================*/
+body 
+{
+ text-align: center;
+ font-weight:normal;
+ background:#ffffff;
+margin: 0;
+padding: 0;
+color: #6a6a6a;
+font-family: "microsoft yahei","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+font-size:12px;
+}
+h1
+{
+ font-size:12px;
+    font-weight: normal;
+}
+h2
+{ 
+ font-size:12px;
+ display:inline; 
+ margin:0; 
+}
+h3 
+{
+ font-size:12px;
+ display:inline;
+ font-weight:normal; 
+ padding:0;
+ margin:0;
+ color:#444;
+}
+dl,dt,dd,ul,li,ol,p,form,img {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	border: none;
+}
+textarea
+{
+ font-size:12px;
+}
+a,a:link,a:active
+{
+ color:#075DB3;
+ text-decoration: none;
+}
+a:hover
+{
+ color:#f90;
+}
+a img 
+{
+ border:0;
+}
+
+/*========================================公共样式===============================================*/
+/*用于订阅图标*/
+#rss img{margin-bottom: 5px; border:0;}
+
+.btnBlueBg
+{
+    padding:5px 9px;font-weight: bold;
+    background-image: url(//image.sojump.com/images/mysojump/questionnairemng/design/com_button.gif);
+    width: 56px;cursor: pointer;color: #ffffff!important;background-repeat: repeat-x;height: 26px; line-height:28px;
+}
+
+input.finish 
+{ 
+     display:inline-block;border:1px solid transparent;cursor:pointer;background:#f17819;font-size:14px;color:#fff;
+    border-radius:5px; padding:0px 15px!important; height:26px; line-height:22px; vertical-align:middle;
+    overflow:visible;
+}
+input.finish:focus {
+    outline:none;
+}
+    input.finish:hover {
+        background:#f18628;
+    }
+input.cancle {
+    background:#fff;color:#333;border:1px solid #adadad; height:26px;
+}
+    input.cancle:hover {
+        background:#f2f8ff;
+    }
+.divline
+{
+color:#2a85bf;
+font-size:14px;
+font-weight:bold;
+margin-bottom:6px; padding-bottom:4px; border-bottom:1px #adb2b4 dashed;  margin-top:20px;
+}
+.divclear{clear: both;height:0px; line-height:0px; font-size:1px;}
+.wls
+{
+ float:left; margin-left:6px; margin-top:38px; font-size: 12px; color: #333; font-weight: normal;  
+}
+.hul li
+{
+  float:left; 
+}
+.qset li{ float:left; margin-left:10px; margin-top:10px; }
+.beijiimg{width:100px; height:75px;cursor:hand;}
+/*水平线：高5像素，淡紫色*/
+.wf{color:#ffffff!important; padding:0;}
+.linehr
+{
+    color:#ccddff;/*#;*/
+ background:#ccddff;
+ height:5px;
+ padding:0;
+ margin-bottom:0;
+ margin-top:0;
+ border:0;
+}
+.linediv
+{ 
+    background:#ccddff;
+ height:5px;
+ line-height:0px;
+ padding:0;
+ margin-bottom:0;
+ margin:3px 0; width:100%;
+ font-size:0px;
+ clear:both;
+ }
+/*水平线：高1像素，淡紫色*/
+.listhr
+{
+    height:1px;
+    border:0;
+    background:#ccddff;
+    color:#ccddff;
+}
+/*16像素，加粗，蓝绿。一般用于标题*/
+.bluefont-16px 
+{
+ font-size: 16px;
+ font-weight: bold;
+ color: #00a6e6;
+}
+/*灰度666，默认字体，不加下划线；HOVER橙色加下划线*/
+a.link-666:link,a.link-666:visited 
+{
+ color: #666666;
+ text-decoration: none; 
+}
+a.link-666:hover 
+{
+ color: #F90;
+}
+
+a.link-U666:link,a.link-U666:visited 
+{
+ color: #666666;
+ text-decoration: underline; 
+}
+a.link-U666:hover 
+{
+ color: #F90 !important;
+}
+
+
+/*灰度666，14像素，字体加粗，不加下划线；HOVER橙色加下划线*/
+a.link-b666,a.link-b666:visited 
+{
+ color:#656565;
+ text-decoration: none;
+ font-size: 14px;
+ font-weight: bold;
+ 
+}
+a.link-b666:hover 
+{
+ color: #F90;
+ text-decoration:underline;
+}
+
+/*灰度999，默认字体，不加下划线；HOVER橙色加下划线*/
+a.link-999:link,a.link-999:visited 
+{
+ color: #999;
+ text-decoration: none;
+}
+a.link-999:hover 
+{
+ color: #F90;
+ text-decoration:none ;
+}
+
+/*蓝绿色，默认字体，不加下划线；HOVER橙色加下划线*/ 
+a.link-00a6e6:link,a.link-00a6e6:visited,a.link-00a6e6:active 
+{
+ color: #00a6e6;
+ text-decoration: none;
+ 
+}
+a.link-00a6e6:hover 
+{
+ color: #F90;
+ text-decoration:none ;
+}
+/*亮浅蓝色，不带下划线*/
+a.link-06f:link,a.link-06f:visited,a.link-06f:active
+{
+ color: #05398c;
+ text-decoration: none;
+}
+a.link-06f:hover
+{
+ color: #ff6600;
+ text-decoration: none;
+}
+/*橙色，不带下划线*/
+a.link-f60:link,a.link-f60:visited,a.link-f60:active
+{
+ color: #ff6600;
+ text-decoration: none;
+}
+a.link-f60:hover
+{
+ color: #ff9900;
+ text-decoration: none;
+}
+/*浅蓝色，默认字体，加下划线；HOVER橙色加下划线;*/
+a.link-U00a6e6,a.link-U00a6e6:link,a.link-U00a6e6:visited 
+{
+ color: #0095da;
+ font-size:14px;
+ text-decoration: underline;
+}
+a.link-U00a6e6:hover 
+{
+ color: #F90;
+ text-decoration:underline ;        
+}
+
+
+/*灰度333，默认字体，加下划线；HOVER橙色加下划线*/
+a.link-U333,a.link-U333:link,a.link-U333:visited 
+{
+ color: #333333;
+ text-decoration: underline;   
+}
+a.link-U333:hover 
+{
+ color: #F90;
+}
+a.link-444,a.link-444:link,a.link-444:visited 
+{
+ color: #444444;
+ text-decoration: none;
+}
+a.link-444:hover 
+{
+ color: #F90;
+}
+a.link-red:link,a.link-red:active,a.link-red:visited 
+{
+    color:red;
+    text-decoration: none;
+}
+a.link-red:hover
+{
+    text-decoration:underline;
+}
+/*灰度333，默认字体 ；HOVER橙色加下划线*/
+a.link-333,a.link-333:link,a.link-333:visited 
+{
+ color: #333333; 
+}
+a.link-333:hover 
+{
+ color: #ff9900; 
+}
+/*浅黄色，默认字体，加下划线；HOVER浅蓝色加下划线*/
+a.link-UF90:link,a.link-UF90:visited {
+ color: #ff6600;
+ text-decoration: underline;
+ FONT-FAMILY: sans-serif,'宋体';       
+ 
+}
+a.link-UF90:hover {
+ color:#ef4d58;
+ text-decoration:underline ;
+ 
+        
+}
+/*白色字体*/
+a.link-fff:link,a.link-fff:visited {
+ color: #ffffff;
+ text-decoration: underline;
+ FONT-FAMILY: sans-serif,'宋体';       
+ 
+}
+a.link-fff:hover {
+ color: #ff9900;
+ text-decoration: underline;
+ FONT-FAMILY: sans-serif,'宋体'
+ 
+        
+}
+/*浅灰色，*/
+a.link-beef:link,a.link-beef:visited
+{
+ color:#eef;
+}
+a.link-beef:hover
+{
+ font-weight:bold;
+}
+/*橙色链接*/
+a.link-UF30:link,a.link-UF30:visited {
+ color: #ff5500;
+ text-decoration: underline;
+}
+a.link-UF30:hover {
+ color: #ef4d58;
+ text-decoration:underline ;       
+}
+/*浅蓝色字体*/
+.list_link a,.list_link a:link,.list_link a:visited
+{
+ COLOR: #3d81ee
+}
+
+.blueb{color:#3155b6! important; font-weight:bold;}
+
+input.operation {
+background-image:url(//image.sojump.com/images/wjx/JoinQuestionnaire/button_normal_bg.gif);
+background-repeat:repeat-x;
+border:1px solid #A7B6C1;
+height:22px;
+margin:0 2px;
+padding:2px;
+/*width:110px;padding-top:3px;*/
+} 
+.chengshefont{color:#ff6600;}
+.divCom
+{
+padding:10px 0;  text-align: left; line-height: 18px; color: #333333;  
+}
+/*橙色按钮样式*/
+ a.btnbg  
+    {
+        background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll right -388px transparent;
+        display: inline-block;
+        height: 22px;
+        padding-right: 5px;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+   a.btnbg span {
+    background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll 0 -364px transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 22px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 0 10px 0 15px;
+    text-align: center;
+}
+a.btnbg:hover{background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll right -439px transparent;}
+   a.btnbg:hover span{background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll 0 -417px transparent;}
+ a.sumitbutton,a.sumitbutton:visited
+{
+     background:#f17819;
+     color:#ffffff !important;
+      display: inline-block;
+        height: 30px;
+        line-height:30px;
+        padding-right: 5px;
+        text-decoration: none;
+        vertical-align: middle;
+          padding: 0 10px 0 15px;
+    text-align: center;
+     font-size: 16px;
+      cursor:pointer;
+      border-radius:5px;
+}
+a.sumitbutton:hover
+{
+    background:#fda420;color:#fff !important;
+}
+a.cancle,a.cancle:visited {
+    background:#fff;color:#333 !important;border:1px solid #adadad;height:28px;line-height:28px;
+}
+a.cancle:hover {
+    background:#f2f8ff;color:#333 !important;
+}
+A.BS_btn {
+    background:#398ABD;
+    border:0;
+    border-radius: 6px;
+     display:inline-block;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    padding:0 15px;
+    color: #FFFFFF !important;
+    font-size: 16px;
+    text-align: center;
+}
+A.BS_btn:hover {
+    background:#317CB4;
+}
+input.submitbutton
+{
+    display:inline-block;height:30px; line-height:30px; border:0;cursor:pointer;background:#f17819;font-size:16px;color:#fff;
+    border-radius:5px; padding: 0 15px;
+    overflow:visible;
+}
+input.submitbutton:hover,input.submitbutton_hover
+{
+    background:#fda420;
+}
+ /*橙色按钮样式*/
+ a.btnbgbig  
+    {
+        background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll right -30px transparent;
+        display: inline-block;
+        height: 30px;
+        padding-right: 5px;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+   a.btnbgbig span {
+    background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight:normal;
+    height: 30px;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 0 10px 0 15px;
+    text-align: center;
+}
+a.btnbgbig:hover{background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll right -98px transparent;}
+   a.btnbgbig:hover span{background: url("//image.sojump.com/images/wjx/btn.png") no-repeat scroll 0 -68px transparent;}
+     
+/*************列表样式，用于公开问卷页面，有奖调查页面等******************/
+.divhead864{ width:864px; margin:0 auto;margin-top:15px;}
+.iframecss{ overflow:auto; border:1px #ccddff solid;}
+#post_list {
+margin-top:0; 
+padding-right:0;
+padding-top:15px;
+}
+  .post_item {
+border-bottom:1px dotted #CCCCCC;
+border-width:1px;
+margin-bottom:15px;
+padding-bottom:15px;
+overflow:hidden;
+width:540px;
+}
+.post_item_body {
+line-height:150%;
+margin-left:10px;
+padding-top:1px;
+}
+#post_list h3 {
+font-size:14px;
+font-weight:bolder;
+margin:0 0 5px;
+}
+#post_list .post_item_summary {
+color:#444444;
+font-size:12px;
+line-height:20px;
+margin-bottom:5px;
+overflow:hidden;
+padding-right:5px;
+padding-top:5px;
+}
+a.titlelnk:link, a.titlelnk:active, a.titlelnk:visited {
+color:#075DB3;
+text-decoration:underline;
+}
+a.titlelnk:hover
+{
+  color:red;
+}
+/*14号字体灰度为444444*/
+.font14px{color:#444444; font-size:14px;}
+/*按钮样式*/
+.buttons A,.buttons A:link,.buttons A:visited,.buttons A:active {
+    background-color: #F5F5F5;
+    border-color: #DEDEDE #BBBBBB #BFBFBF #DEDEDE;
+    border-right: 1px solid #BBBBBB;
+    border-style: solid;
+    border-width: 1px;
+    color: #529214;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 130%;
+    margin: 0 0.7em 0 0;
+    padding: 5px 10px 6px;
+    text-decoration: none;
+}
+.buttons A:hover {
+    background-color: #DFF4FF;
+    border-color: #A7CEDF;
+    border-right: 1px solid #A7CEDF;
+    border-style: solid;
+    border-width: 1px;
+    text-decoration: underline;
+}
+
+.buttons A IMG {
+    margin: 0 3px -3px 0;
+}
+/*白色字体加粗，14像素，文本居中*/
+.s_help_biaoti { FONT-WEIGHT: bold; font-size:14px; COLOR: #ffffff; LINE-HEIGHT: 20px; TEXT-ALIGN: center}
+/*用于所有Tab Control*/
+.font-999{COLOR:#999999;}
+.font-666{color:#666666;}
+.font-18px{FONT-SIZE:16px}
+.txtleft{ text-align:left;}
+.B{FONT-WEIGHT: bold}
+.bg{ background:#f2ffff;}
+/*亮浅蓝色字体*/
+.font {COLOR: #00a6e6}
+/*浅蓝色字体*/
+.font-3d81ee{color:#3d81ee;}
+/*亮蓝色字体*/
+.font-06f{color:#0066ff;} 
+/*浅灰色字体*/
+.font-a0{color:#a0a0a0;}
+/*红色字体*/
+.font-red{color:Red;}
+/*灰度为666字体,加粗*/
+.biaoti
+{
+ color: #555;
+ font-weight:bold;
+}
+/*用于价格表：白色的13像素字体*/
+.edited
+{
+ font-size: 14px;
+ color: #ffffff;
+ text-decoration: none;
+}
+/*用于价格表：白色的加粗13像素*/
+.table_big_text {
+ font-size: 13px;
+ font-weight: bold;
+ color: #FFFFFF;
+ line-height: 18px;
+}
+/*用于价格表：灰度为333的13像素字体*/
+.s_remark_h
+{
+ font-size: 13px;
+ line-height: 20px;
+ color: #333333;
+}
+/*蓝色14px*/
+.bluefont-14px{font-size:18px; color:green; font-weight:bold; vertical-align:top; line-height:30px;}
+/*用于成功案例：黑色为f60的14像素字体*/
+.font_f60_14px
+{
+ font-size: 14px; color:#444; font-weight:bold;
+}
+
+/*绿色字体*/
+.greenfont{ color:Green;}
+/*修改用户信息*/
+.biaotiUserInfo{font-size:12px; color:#0066ff;}
+
+.note
+{
+ font-size: 12px;
+ color: #666666;
+ height: 20px;
+}
+/*用于成功案例：橙色为f60的16像素字体*/
+.font_green_16px_line30px
+{
+ font-size: 16px; color:#f60; line-height:30px; font-weight:bold; float:left; margin-top:15px;
+}
+a.link_green,a.link_green:link,a.link_green:active,a.link_green:visited
+{
+ color:green;
+ text-decoration: none;
+}
+a.link_green:hover
+{
+ color: #F90;
+ text-decoration:none;
+}
+/*用于最新问卷，最热问卷等右边div的样式*/
+.divRight
+{
+ background-repeat: repeat-x; background-image: url(//image.sojump.com/images/wjx/jq/wjxx_bj.jpg); line-height:20px; clear:both;
+ border:#dce4ed 1px solid; margin-top:20px; float:left; vertical-align:bottom;padding: 3px; 
+}
+.biaoti2
+{
+ font-size: 14px;
+ font-weight: bold;
+ font-variant: small-caps;
+ color: #760101;
+}
+.normallink6
+{
+ font-size: 12px;
+ color: #0066ff;
+ text-decoration: none;
+}
+/*==============================================按页面分的样式==========================================*/
+/*用于控件ViewResult.ascx*/
+b.rbottom,b.rtop{display:block; width: 850px; margin: 0px auto;background: #FFFFFF} 
+b.rbottom b,b.rtop b{display:block;height: 1px;overflow: hidden; background: #689bce} 
+b.r1{margin: 0 5px} 
+b.r2{margin: 0 3px} 
+b.r3{margin: 0 2px}  
+b.rbottom b.r4,b.rtop b.r4{margin: 0 1px;height: 1px} 
+
+/*****WJXVipNew.master页面的底部用********/
+
+/*用于WjxPub.master母版页*/
+/**问卷星LOGO的解释文字的样式首页的H1
+ **/
+.BgImgTouMing {
+     text-align: left;
+     padding:0; 
+    }
+.BgImgBuTouMing {
+     BACKGROUND-COLOR: #ffffff;margin:0;
+    }
+#container
+{
+ text-align: left;
+ width: 920px;
+ margin:20px auto 0;
+ padding:0;
+ background:#fff;
+}
+#headerpub
+{
+ WIDTH: 920px; COLOR: #333; POSITION: relative;
+ height:65px;
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/WJX/JQ/bj.jpg);
+ background-repeat: repeat-x;
+}
+#headerpub img
+{
+ float:left; margin-left:5px;
+} 
+.navpub
+{
+ height:60px;
+ float:right;
+ padding-right:10px;
+ width:552px;
+}
+.navpub span
+{
+ margin-left:10px;   
+}
+
+.navpub ul 
+{
+ float:left;
+}
+.navpub UL LI 
+{
+ float: left;
+ margin:0; padding:0;
+ margin-left:10px;
+}
+.navpub UL LI A 
+{
+ padding-left:19px;
+ line-height:20px;
+}    
+.navpub UL LI.DesignNewQ A,.navpub UL LI.wjxhelppub A,.navpub UL LI.exit A 
+{
+ padding:3px 0 6px 2px;border:0; background:none;
+}
+
+input,button{
+	font-family: "微软雅黑","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	font-size:12px;
+	}
+#W-header{
+	width:100%;
+	background:#e2eff7;
+	height:160px;
+	}
+.c-header{
+	width:966px;
+	margin:0 auto;
+	padding:35px 12px 0px;
+	overflow:hidden;
+	height:112px;
+	}
+.sojump_2016logo {
+	float: left;
+	width:286px;
+	height:92px;
+	padding-left:5px;
+	text-align:left;
+	}
+.W-sojump_image{
+    background-image: url('//image.sojump.com/images/index2016/sojump2016logo.png') !important;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//image.sojump.com/images/index2016/sojump2016logo.png");
+    background-repeat:  no-repeat; 
+    _background-image: none; /* IE6 */
+    width: 183px; 
+    height: 92px;
+    text-align: left;
+    position:relative;
+	}
+.W-sojump_image h1 {
+    display: inline;
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    padding: 0;
+    margin: 0;
+    color: #444444;
+    position: absolute;
+    background:none;
+    border:none;
+    font-weight:normal;
+    top:75px;
+    _top:70px;
+}
+.W-header_r {
+	float:left;
+	width:675px;
+	overflow:hidden;
+	height:112px;
+	}
+.W-header_reg {
+	float: right;
+	height: 30px;
+	margin:0 auto ;
+	text-align:right;
+	padding-right:15px;
+	font-size:14px;
+	}
+.W-header_reg ul {
+	margin: auto;
+	padding: 0;
+	}
+.W-header_reg ul li {
+	display:inline;
+	padding: 0 ;
+	line-height:30px;
+	float:left;
+	margin-left:22px;
+	font-size:14px;
+	}
+.W-header_btn {
+    -webkit-border-radius:6;
+    -moz-border-radius:6;
+    border-radius:6px;
+    color: #ffffff;
+    background: #e77817;
+    text-decoration: none;
+	width:82px;
+	height:30px;
+	line-height:30px;
+	display:inline-block;
+	text-align:center;
+	}
+A.new_titxt{
+	color:#555;
+	font-size:16px;
+	}
+A.new_titxt:hover{
+	color:#ff9900;
+	}
+/*导航*/	
+.W-Menu{
+	margin:28px auto 0px;
+	padding:0px;
+	float: right;
+	width:675px;
+	}
+.W-Menu ul {
+	margin:0;
+	padding:0;
+	}
+.W-Menu ul li {
+	display: inline;
+	float: left;
+	padding: 0px 6px;
+	cursor: pointer;
+	margin:0px 24px;
+	letter-spacing:2px;
+	}
+.W-Menu ul li a,.W-Menu ul li a:visited{
+	font-size:18px;
+	color:#6a6a6a;
+	}
+.W-Menu ul li a:hover{
+	color:#e77817;
+	border-bottom:2px solid #e77817;
+	padding-bottom:4px;
+	}
+.W-Menu ul li.acitve{
+	border-bottom:2px solid #e77817;
+	padding-bottom:4px;
+	}
+
+#Wfooter {
+	background:#f6f6f6;
+	margin:0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	min-width:980px;
+	}
+#Wcontact{
+	width:980px;
+	margin:30px auto 15px;
+	overflow: auto;
+	}
+.W-ulCons {
+	float:left;
+	overflow:hidden;
+	padding:0;
+	width:175px;
+	border-left:1px solid #e5e5e5;
+	text-align:left;
+	padding-left:20px;
+	height:125px;
+	}
+.W-ulCons li {
+	width:165px;
+	line-height:22px;
+	text-align:left;
+	text-indent:3.5em;
+	}
+.i-Common{
+	line-height:34px !important;
+	}
+.W-ulCons li b
+	{
+    font-size:16px;
+	}
+.WulCons-i1{
+	background:url(/images/index2016/2016Sico.gif) no-repeat;
+	height:34px;
+	}
+.WulCons-i2{
+	background:url(/images/index2016/2016Sico2.gif) no-repeat;
+	height:34px;
+	}
+.WulCons-i3{
+	background:url(/images/index2016/2016Sico3.gif) no-repeat;
+	height:34px;
+	}
+.WulCons-i4{
+	background:url(/images/index2016/2016Sico4.gif) no-repeat;
+	height:34px;
+	}
+.W-coypright{
+	width:990px;
+	margin:0px auto 10px;
+	padding:2px 0px 5px;
+	overflow:hidden;
+	border-bottom: 1px solid #c7c7c7;
+	height:52px;
+	}
+.WalCons {
+    float: left;
+    padding:0 0 0 9px;
+	margin:5px 0 0 0;
+	}
+.WalCons li {
+	float:left;
+	color:#999;
+	margin:0px;
+	padding:0px;
+	font-size:14px;
+	}
+.W-mark{
+	letter-spacing: 11px; 
+	font-size:12px !important;
+	width:220px !important;
+	}
+.W-Rttx{
+	padding-right:24px;
+	}
+.W-fttx{
+	padding-top:25px;
+	}
+.Walcons_txt{
+	float:right;
+	margin:7px 0px 0px 0px; 
+	color:#666;
+	font-family:Verdana, Geneva, sans-serif;
+	filter:alpha(opacity=90);-moz-opacity:0.9;opacity:0.9;
+	font-size:12px;
+	}
+#Wfooter a{
+	font-size:14px;
+	color:#7b7b7b;
+	}
+#Wfooter a:hover{
+	font-size:14px;
+	color:#e77817;
+	}
+.W-Fimg{
+	width:1000px;
+	margin:0 auto;
+	padding:5px 0px 15px;
+	overflow:hidden;
+	}
+.W-Fimg li{
+	float:left;
+	width:125px;
+	height:45px;
+	margin:0px 4px;
+	border:1px solid #c7c7c7;
+	}
+
+
+a.a555{color:#555555!important; 
+ font-size:12px;
+ text-decoration: none;}
+a.a555:hover{text-decoration:underline; color:#ff9900!important;}
+  
+/*FAQ引用的样式*/
+#divFAQ
+{
+    background: #ccedfc; border: solid #ccedfd 1px; padding-top:8px;
+}
+#divFAQ span
+{
+ font-weight: bold; color: #555; display:inline;padding-top:10px; line-height:26px;
+}
+#divFAQ ul
+{
+    margin-left: 15px; line-height: 20px;
+}
+#divFAQ ul li
+{
+ list-style-type:disc;
+ margin-left:16px;
+}
+#divFAQ ul li a:link
+{
+    color: #666;text-decoration: none;
+}
+#divFAQ ul li a:visited
+{
+    color: #666;text-decoration: none;
+}
+#divFAQ ul li a:hover {
+ color: #F90;text-decoration:none ;
+}
+.divTWen
+{
+ margin-bottom:5px; margin-top:5px; margin-left:80px;font-size: 12px; font-weight: bold;
+}
+
+/****************用于所有统计页面解决内容居中问题*********************/
+  .menu-2{ width:850px; margin:0 auto;}
+
+/*用于查看结果里面的各种图形显示样式a,a:link,a:active*/
+.liSelect{border:1px #f9960a solid! important; background:#fffcdb! important;}
+.divResultCss{ height: 24px; text-align: center; padding:0; padding-bottom:5px; color:#1f376d;}
+.divResultCss ul li{border:1px #dbdbdb solid; margin-left:12px; line-height:24px; float:left; background:#ffffff; border-radius:3px; }
+.divResultCss ul li a,.divResultCss ul li a:visited{ text-decoration:none; padding:4px 4px 4px 22px; color:#1f376d; height:16px;}
+.divResultCss ul li a:hover{color:#ff9900;}
+.bingtu{BACKGROUND: url(//image.sojump.com/images/wjx/viewstat/pie.gif)  no-repeat 4px 4px;}
+.donut{BACKGROUND: url(//image.sojump.com/images/wjx/viewstat/donut.gif)  no-repeat 4px 4px;}
+.zhutu{BACKGROUND: url(//image.sojump.com/images/wjx/viewstat/column3d.gif)  no-repeat 4px 4px;}
+.tiao{BACKGROUND: url(//image.sojump.com/images/wjx/viewstat/bar2d.gif)  no-repeat 4px 4px;}
+.zhexian{BACKGROUND: url(//image.sojump.com/images/wjx/viewstat/line.gif)  no-repeat 4px 4px;}
+.leida{BACKGROUND: url(//image.sojump.com/images/wjx/viewstat/leidatu.gif)  no-repeat 2px 2px;}
+.biaoge{BACKGROUND: url(//image.sojump.com/images/Mysojump/QuestionnaireMng/Design/juzhenti.gif)  no-repeat 4px 4px;}
+
+
+/*用于选择模版页面*/
+.smenu-1 LI 
+{
+ DISPLAY: block; FLOAT: left; WIDTH: 117px; CURSOR: pointer; LINE-HEIGHT: 28px! important; PADDING-TOP: 0; 
+ HEIGHT: 28px! important; 
+ TEXT-ALIGN: center
+}
+.smenu-1
+{
+    BORDER-RIGHT: #dce4ed 1px solid; FLOAT: left; HEIGHT: 28px; padding: 0; margin: 0
+}
+.smenu-2 
+{
+ BORDER-RIGHT: #dce4ed 1px solid; FLOAT: left; BORDER-LEFT: #dce4ed 1px solid; WIDTH: 833px; 
+ PADDING: 0; margin: 0; BORDER-BOTTOM: #dce4ed 1px solid; HEIGHT: 360px
+}
+
+
+/*=============================================填写问卷，设计问卷页面=============================================*/
+.spanLeft
+{
+     float:left;
+}
+.spanRight
+{
+    float:right;
+}
+
+ .inputtext
+{
+    border:solid 1px #cdcdcd;/*7F9DB9*/
+    padding:3px;
+    vertical-align:middle;
+} 
+ .underline
+{
+    background-color: transparent;
+    border:solid 1px transparent;padding:3px;_border-color:white;
+    border-bottom:solid 1px #cdcdcd;
+} 
+   .inputtext:focus,.underline:focus {
+        outline:none;
+        border:1px solid #53a4f4;
+    }
+
+/*======================================设计问卷里面用的样式===================================*/
+/*用于设计问卷页面的样式*/
+#content 
+{
+ height:auto;
+}
+/*
+用于问卷说明的样式
+*/
+.QDes
+{
+ line-height:20px;
+ color:#555;
+ padding:0 10px;
+ text-align:left;
+}
+/*
+***********保存链接的样式*********
+*/
+
+#saveLink  a:link {color:blue;}
+#saveLink  a:hover{color:#f53d05;}
+#abort a:link {color:red;}
+#abort a:visited {color:red;}
+  /*
+***********问卷标题的样式*********
+*/
+.main_title{
+font-size:20px;
+font-weight:bold;
+width:540px;
+padding:10px 0;
+text-align:center;
+}
+ /*
+***********预览和填写时每页最下面的公司信息*********
+*/
+.register_div{
+width:150px;
+padding-right:5px;
+float:right;
+}
+
+ /*
+*********** 预览按钮样式*********
+*/ 
+.btn_div_preview{
+margin-top:10px;
+margin-bottom:5px;
+margin-left:340px;
+
+}
+ /*
+*********** 填写按钮样式*********
+*/ 
+.btn_div_input{
+margin-top:10px;
+margin-bottom:5px;
+margin-left:420px;
+
+}
+/******用问卷星使用流程*****/
+.divNoPub ul li{float:left; vertical-align:middle;height:102px; width:212px; color:#666666;}
+.publish-step  {
+    margin:0;padding:10px 10px 0 18px;line-height:20px;background:url("//image.sojump.com/images/wjx/nbg-launch-5.gif") no-repeat;height:97px;cursor:pointer;
+}
+.divNoPub .helper-caption{width:176px; }
+.divNoPub .helper-caption span{color:#444444;font-weight:bold; font-size:13px;}
+.divNoPub ul li a{color:#444444!important;}
+
+/***只用于首页*****/
+.downMenu ul{padding:0; margin:0;}
+.downMenu ul LI{ margin-top:0;}
+.downMenu ul LI A 
+{
+	padding-bottom:0; padding-top:7px; margin: 0; cursor: pointer; background: #e8ecf2; color:#205fa2! important;
+	text-decoration: none;  display:  inline-block; height:22px;width:80px;
+    border: 1px #c2d3ed solid;border-top:none;
+}
+.downMenu ul LI A:hover 
+{
+	font-weight:normal;background:#fffeff;color:#205fa2;
+	background:#fffeff url(//image.sojump.com/images/wjx/index/catch.gif) no-repeat 96% 18%;
+}
+
+.linediv {
+    background: none repeat scroll 0 0 #b7b7b9;
+    clear: both;
+    font-size: 0;
+    height: 2px;
+    line-height: 0;
+    margin: 3px 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+#W-banner{
+	width:100%;
+	background:#1a5b94 url(//image.sojump.com/images/index2016/W-banner.jpg?v=1) no-repeat top center;
+	height:447px;
+	}
+.W-indexbox{
+	width:900px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.W-Complex {
+	margin:165px 0 0 0;
+	float:left;
+	text-align:left;
+	width:690px;
+	}
+.W-Complex div {
+	float: left;
+	margin-right:35px;
+	display: inline;
+	}
+.W-Space{
+	margin:0 0 0 85px;
+	}
+A.W-button {
+	display: block;
+	margin: 0 auto;
+	-webkit-border-radius:8;
+	-moz-border-radius:8;
+	border-radius:8px;
+	background: #e77817;
+	padding:6px 28px;
+	border: 0;
+	text-align: center;
+	color:#fff !important;
+	font-size:22px;
+	text-decoration: none;
+	letter-spacing:1px;
+	}
+A.W-button:hover{
+	background:#f18628;
+	}
+
+.W-video {
+	display: block;
+	width: 50px;
+	height: 42px;
+	background:url(/images/index2016/sojump2016video.png) no-repeat;
+	_background:none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/index2016/sojump2016video.png");
+	}
+.W-Ninner-rbox{
+	width:450px;
+	float:left;
+	margin:15px 0 0 85px;
+	}
+.W-Ninner-rbox li{
+	display:inline;
+	color:#FFF;
+	margin-right:4px;
+	}
+.W-Ninner-rbox li i {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+}
+.W-NCbox{
+	width:320px;
+	margin:0 auto;
+	}
+.W-NCbox li{
+	float:left;
+	width:160px;
+	text-align:left;
+	font-size:14px;
+	line-height:28px;
+	}
+.W-NCbox li i {
+    color: #e77817;
+    font-size: 16px;
+    font-style: normal;
+	}
+.W-NCbox a{
+	float:left;
+	margin:15px 36px 0px 4px;
+	}
+
+.W-Newdate{
+	height:27px;
+	line-height:27px;
+	color:#FFF;
+	letter-spacing:2px;
+	font-size:14px;
+	margin:10px 0 60px 9px;
+	clear:both;
+	}
+.W-Ndate-num{
+	font-size:22px;
+	}
+.W-Mobile{
+	float:left;
+	padding-top:32px;
+	}
+.W-Mobile a{
+    background:url(/images/index2016/sojumpMobile.png) no-repeat;
+    _background:none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/index2016/sojumpMobile.png");
+    display:inline-block;
+	width:154px;
+	height:318px;
+    cursor:pointer;
+	}
+.W-menuwrapper{
+    position:relative;
+    margin-top:32px;
+	}
+.W-MenuList{
+	background:#2a3c63;
+	min-width:990px;
+	height:65px;
+	filter:alpha(opacity=50); 
+	opacity:0.4;
+	position:absolute;
+	*position:static;
+	width:100%;
+	}
+.W-ML-box{
+	width:982px;
+	padding:0;
+	height:53px;
+	color:#fff;
+	padding:6px 4px;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	margin:0 0 0 -495px;
+	left:50%;
+	}
+.W-ML-box li{
+	display: inline;
+	float: left;
+	text-align:center;
+	padding: 0px;
+	line-height:53px;
+	cursor: pointer;
+	width:192px;
+	border-left:1px solid #FFF;
+	letter-spacing:1px;
+	}
+a.indexcase,a.indexcase:visited{
+	color:#FFF;
+	font-size:18px;
+	}
+a.indexcase:hover{
+	color:#ffff00;
+	}
+#W-qinner{
+	width:100%;
+	background:#ebf7ff url(//image.sojump.com/images/index2016/W-qinner-bg.jpg) no-repeat top center;
+	text-align:left
+	}
+.W-qinner-C {
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+	}
+.W-qinner-C h1 {
+    margin-bottom:28px;
+	}
+.W-qinner-Tf {
+    text-align: left;
+    margin-left:45px;
+}
+.W-TTx {
+    color: #72706f;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: 1px;
+	}
+.W-qinner-F{
+	float:left;
+	}
+.W-Enterprises{
+	background:url(//image.sojump.com/images/index2016/EnterpriseFeatures.png) no-repeat;
+	 _background:none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//image.sojump.com/images/index2016/EnterpriseFeatures.png");
+    display:inline-block;
+	width:575px;
+	height:343px;
+	}
+.W-part_t {
+    padding: 72px 0px 35px;
+	}
+.NewTF{
+	float:left;
+	width:415px;
+	overflow:hidden;
+	}
+.W-qinner-R{
+	float:right;
+	width:365px;
+	text-align:center;
+	}
+.W-qinnernum{
+	margin:25px 0px 15px;
+	font-size:16px;
+	padding-bottom:10px;
+	border-bottom:3px solid #dbe7f5;
+	}
+.numF{
+	border-top:3px solid #bbd4d0;
+	border-bottom:0;
+	padding-top:15px;
+	margin-left:45px;
+	text-align:left;
+	}
+.W-coloor{
+	color:#e77817;
+	font-size:20px;
+	font-weight:bold;
+	}
+.W-qinner-txt{
+	font-size:16px;
+	font-weight:normal;
+	}
+.W-qinner-rbox{
+	width:150px;
+	float:left;
+	margin-left:8px;
+	}
+.W-qinner-rbox li{
+	line-height:37px;
+	font-size:14px;
+	}
+.W-qinner-rbox li i{
+	color:#e77817;
+	font-size:22px;
+	font-style:normal;
+	vertical-align:top;
+	*vertical-align:middle;
+	}
+a.Wbtn,a.Wbtn:hover{
+    font-size: 14px;
+    display:inline-block;
+    padding: 0 24px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 34px;
+    border-radius: 4px;
+    cursor: pointer;
+	color:#FFF;
+	}
+.wttl{
+	background:#0482d4;
+	border:1px solid #0482d4
+	}
+A.wbg-em,a.wbg-em:hover{
+	background:none;
+	color:#0482d4
+	}
+A.wbg-sample{
+	background:#59b3aa;
+	}
+.W-rrc{
+	margin:12px 0 0 15px;
+	}
+.W-rrc2{
+	margin:15px 0 0 42px;
+	}
+#W-qinner2{
+	width:100%;
+	background:#e6f4f6;
+	text-align:left
+	}
+.qpservice
+{
+   font-size:14px;height:22px;line-height:22px;display:inline-block;vertical-align:middle; margin-right:10px; 
+}
+.qpservice *
+{
+    vertical-align:middle;
+}
+.W-Clients{
+	width:100%;
+	background:#FFF;
+	margin:65px auto;
+	overflow:hidden
+	}
+.W-Flist{
+	width:980px;
+	margin:0 auto;
+	}
+.W-hoverbox{
+	width:980px;
+	margin:0 auto;
+	padding:45px 0px 0px 0px;
+	clear:both;
+	overflow:hidden
+	}
+.W-NClient {
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+    line-height: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+.W-hoverbox img{
+	color:inherit;
+	width:114px;
+	height:130px;
+	}
+.W-hoverbox li{
+	float: left;
+	margin-right:30px;
+	}
+.W-CTbox{
+	width:980px;
+	height:110px;
+	margin:25px auto 0;
+	border:1px solid #3596ce;
+	position:relative;
+	display:none;
+	}
+.W-CTboxC{
+	float:left;
+	width:110px;
+	height:80px;
+	color:#0e527a;
+	margin:15px 0;
+	font-size:22px;
+	border-right:1px solid #dddddd;
+	line-height:80px;
+	font-weight:normal;
+	text-align:center
+	}
+.W-CTbox-C{
+	width:860px;
+	float:left;
+	margin:0;
+	padding:0;
+	}
+.W-CTbox-C li{
+	float:left;
+	margin:0 6px 0 12px;
+	line-height:110px;
+	}
+.W-CTbox-C li img{
+	vertical-align:middle;
+	}
+	
+.W-CTbox em{
+	display:block; 
+	border-width:15px; 
+	position:absolute; 
+	top:-30px; 
+	left:42px;
+	border-style:dashed dashed solid; 
+	border-color:transparent transparent #3596ce;
+	font-size:0; 
+	line-height:0;
+	}
+.W-CTbox span{
+	display:block; 
+	border-width:15px; 
+	position:absolute; 
+	top:-28px; 
+	left:42px;
+	border-style:dashed dashed solid; 
+	border-color:transparent transparent #FFF;
+	font-size:0; 
+	line-height:0;
+	}
+
+.WTriangle span,.WTriangle em{
+    left:186px;
+}
+.WTriangle2 span,.WTriangle2 em{
+    left:330px;
+}
+.WTriangle3 span,.WTriangle3 em{
+    left:474px;
+}
+.WTriangle4 span,.WTriangle4 em{
+    left:618px;
+}
+.WTriangle5 span,.WTriangle5 em{
+    left:762px;
+}
+.WTriangle6 span,.WTriangle6 em{
+    left:908px;
+}
+#Tags {
+	width:980px;
+	}
+#tagContent div.selectTag {
+	display:block;
+}
+
+/*首页改版后的样式*/
+.greenfont-14px{color: Green; font-size:14px; }
+
+.liline{clear: both; margin:0; padding:0; line-height:0; height:10px; border-bottom: 1px solid #efefef;}
+ #ulfaq li a:hover {
+color: #F90;
+}
+#ulfaq li a {
+color: #444;
+}
+.dianfont 
+{
+-webkit-text-size-adjust: none;
+font-size:8px;
+height:1px;
+line-height:16px;
+padding:0 3px 0 0;
+display:inline;
+}
+/*首页三角形样式*/
+.bordCss
+{
+    height:0;
+    width:0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-color:transparent transparent transparent #FF9900 ;
+    border-style:dashed dashed dashed solid ;
+    border-width:5px;
+    border-right-width:0;
+    display:inline-block;
+    margin:2px 2px 0 0 ;
+}
+.bordCssGreen
+{
+    border-color:transparent transparent transparent #26850d ;
+    margin:2px 3px 0 0 ;
+}
+.bordBottomCss
+{ 
+    border-color: #FF9900 transparent transparent transparent;
+    border-style:solid dashed dashed dashed ;
+    border-width:5px;
+    border-bottom-width:0;
+    margin:0;
+}
+.bordBottomCssN
+{
+    
+    border-style:solid dashed dashed dashed ;
+    border-color:#333333 transparent transparent transparent ;
+    border-width:3px;
+    border-bottom-width:0;
+    margin:0 0 4px 2px;
+}
+.bordBottomCssNF
+{
+    border-style:solid dashed dashed dashed ;
+    border-color:#ffffff transparent transparent transparent ;
+    border-width:3px;
+    border-bottom-width:0;
+    margin:0 0 4px 2px;
+}
+.spanLeftTxt{ display:inline-block; line-height:24px;cursor:pointer;}
+
+    
+/*用于jq页面分享问卷图标样式*/
+.freejqbg{
+    background-image:url("//image.sojump.com/images/wjx/JoinQuestionnaire/freejqbg.gif");
+    background-repeat:no-repeat;
+    display: inline-block;
+    overflow:hidden;
+}
+.copyqbg{
+    background-position:-20px 0px;
+    height:16px;
+    width:16px;  
+    margin-right:5px;
+}
+.jiangbg{
+    background-position:-40px 0px;
+    height:16px;
+    width:16px;
+    margin-right:5px;
+ }
+.searchbg
+{
+    background-position:-60px 0px;
+    height:15px;
+    width:13px;   
+    margin-right:5px; 
+}
+.cepingbg{
+    background-position:-77px 2px;
+    height:16px;
+    width:16px;
+    margin-right:5px;
+ } 
+.designQbg
+{
+    background-position:-95px 0px;
+    height:16px;
+    width:16px;
+}
+.wjxhelpbg
+{
+    background-position:-115px 0px;
+    height:16px;
+    width:16px;
+}
+.search{
+background: url(//image.sojump.com/images/wjx/search.gif) no-repeat;
+ height:16px;}
+ .copyq
+ {
+     background: url(//image.sojump.com/images/Master_Images/WjxVip/copy.gif) no-repeat;
+ height:16px;
+ }
+ 
+.jiang{
+ background:url(//image.sojump.com/images/wjx/liwu.gif) no-repeat;
+ height:16px;}
+.ceping{
+ background: url(//image.sojump.com/images/wjx/ceping.png) no-repeat;
+ height:16px;}
+.designQ
+{
+ background: url(//image.sojump.com/images/Master_Images/WjxVip/DesignNewQ.gif) no-repeat;
+ width:16px;
+ height:16px;
+}
+.wjxhelp
+{
+ background:url(//image.sojump.com/images/Master_Images/WjxVip/wjxhelp.gif) no-repeat;
+}
+.yangben{
+ background: url(//image.sojump.com/images/wjx/yangben.gif) no-repeat;
+ height:16px;}
+.address
+{
+ background: url(//image.sojump.com/images/Master_Images/WjxVip/group.gif) no-repeat;
+ height:16px;
+}
+
+/*******我的问卷页面的“暂停”、“编辑”等使用样式*******/
+#stuff ul 
+{
+ FLOAT: left; MARGIN: 1px 0 1px 5px; WIDTH: auto
+}
+#stuff li 
+{
+ CLEAR: none; PADDING-RIGHT: 0; PADDING-LEFT: 0; FLOAT: left; PADDING-BOTTOM: 0; PADDING-TOP: 0
+}
+#stuff li a,#sutff li a:active
+{
+   background-position: 7px 3px; border:1px solid #f5f5f5; 
+ display: inline-block;  margin: 2px 0; 
+ cursor: pointer; color:#454545; line-height: 22px; background-repeat: no-repeat; 
+ text-decoration: none;  padding:0 6px 0 27px;
+}
+#stuff LI A:hover,#stuff li a.hover 
+{
+  color: #336699; background-color: #dff4ff;border:1px solid #c2e1ef;
+}
+.publish 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/publish.gif)
+}
+.copy 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/copy.gif)
+}
+.delete 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/cross.gif)
+}
+.pause
+{
+    BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/stop.gif)
+}
+.run
+{
+    BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/run.gif)
+}
+.invite 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/invite_ico.gif)
+}
+.emed 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/emed.gif)
+}
+.entries 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/application_view_list.gif)
+}
+.report 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/chart_bar.gif)
+}
+.source 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/arealMay.gif)
+}
+.jcfx 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/jcfx.gif)
+}
+.view 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/application_form.gif)
+}
+.edit 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/application_form_edit.gif)
+}
+.manage{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/manageQ.gif)}
+.upload
+{
+    BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/uploadpic.gif)
+}
+ 
+.review
+{
+    BACKGROUND-IMAGE:url(/App_Themes/Blue/Images/LeaveMessage/Outbox.gif)
+}
+.folder
+{
+    BACKGROUND-IMAGE:url("/images/master_images/file_ico.gif")
+}
+.complete 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/complete.gif)
+}
+.password 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/key.gif)
+}
+.tag 
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/tag.gif)
+}
+.key
+{
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/Master_Images/WjxVip/buy.gif) 
+}
+/***************Flash设置样式******************/
+#divFlashSet
+{
+ border: 2px; border-color: #999; border-style: solid; float:left; background: #eeefff;
+ font-size: 12px; width: 240px; line-height: 16px; padding:10px;margin-top:300px;
+}
+/**********下载答卷页面引用样式************/
+.text2
+{
+ font-size: 12px;
+ color: #333;
+ line-height: 18px;
+}
+.tableCellPadding
+{
+ padding-right: 15px;
+ padding-left: 0;
+ padding-bottom: 1px;
+ padding-top: 1px;
+ white-space:nowrap;
+ text-align:left;
+}
+.text 
+{ 
+ COLOR: #444; 
+ font-size:12px;
+ LINE-HEIGHT: 20px;
+}
+
+
+
+/*用于页面布局*/
+#main 
+{
+ PADDING-RIGHT: 0; PADDING-LEFT: 0; PADDING-BOTTOM: 20px; MARGIN: 0 0 0 20px; PADDING-TOP: 20px
+}
+
+
+#rbbox
+{
+    position:absolute;right:0;bottom:0; font-size: 12px; Z-INDEX:999999;
+    overflow:hidden; 
+} 
+.messagetck {
+width: 279px;
+background: #5a9e00;
+border: 1px solid #CFE19F;
+padding: 5px;
+}
+.message_content {
+background: white;
+border: 1px solid white;
+padding: 10px 15px 10px 15px;
+}
+.message_h1_span1 {
+float: left;
+font-weight: bold;
+font-size: 14px;
+color: #333;
+height:23px;
+line-height:23px;
+}
+.message_h1_span2 {
+float: right;
+}
+.message_text {
+padding: 0px 0px 0px 10px;
+text-align: left;
+}
+.divContent
+{
+      font-size: 12px;  padding:3px;  width:220px;line-height:18px;
+    color: #1f336b;
+}
+
+/*用于查看结果里面的表格样式*/
+
+.tableResult
+{
+ border-top:1px solid #d7d7d7;
+ border-left:1px solid #d7d7d7;
+}
+.tableResult  td
+{
+     border-right:1px solid #d7d7d7;
+ border-bottom:1px solid #d7d7d7;
+}
+
+/*设置属性页面：得分设置引用的样式*/
+.trCss
+{ 
+ background:#eee;
+ height:20px;
+ font-weight:bold;
+ text-align:center;
+}
+.divContentscore
+{
+ background:#eff6fb;
+ color:#444;
+ width:474px;
+ border:0;
+ padding:10px;
+}
+/*用于更多成功案例页面*/
+#divMMU li{width:760px; margin-top:8px;}
+.liLeft{ margin-right:15px;  background:#eff7ff; padding:5px 0;}
+.spanDate{padding-left:15px; font-weight:bold;}
+
+/*用于专业版模版页面*/
+.divQ{ margin-left:4px; width:212px; margin-bottom:10px;height:560px;vertical-align:middle;  overflow:auto; white-space: nowrap;}
+.MenuBox .titBox a,
+.MenuBox .titBox a:visited,
+.MenuBox2 .titBox a,
+.MenuBox2 .titBox a:visited {padding-left:20px;color:#003;font-size:12px;display:block;}
+.MenuBox .titBox span a {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/ico_folder_open.gif) no-repeat 0 40%;}
+.MenuBox .titBox span.Fst a {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.MenuBox .titBox span.Lst a {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox span a {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/ico_folder.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox span.Fst a {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/ico_folder_fst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox span.Lst a {line-height:150%;background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/icon_exit.gif) no-repeat 0 0;}
+.MenuBox2 .txtBox {display:none;}
+.MenuBox .txtBox ul li {padding-left:48px;line-height:150%;}
+.MenuBox .txtBox .num {color:#e00;}
+.MenuBox .txtBox ul {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/line_y.gif) repeat-y 4px 0;}
+.MenuBox .txtBox ul li {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/t.gif) no-repeat 28px 40%; font-size:12px;}
+.MenuBox .txtBox ul li.Lst {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/t_lst.gif) no-repeat 28px 10%;}
+
+.MenuBox2 .txtBottom {display:none;}
+.MenuBox .txtBottom ul li {padding-left:48px;line-height:150%;}
+.MenuBox .txtBottom .num {color:#e00;} 
+.MenuBox .txtBottom ul li {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/t.gif) no-repeat 28px 40%; font-size:12px;}
+.MenuBox .txtBottom ul li.Lst {background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/t_lst.gif) no-repeat 28px 10%;}
+.MenuBox .txtBottom ul li.top{background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/t_lst.gif) no-repeat 28px 10%;}
+.MenuBox .txtBottom span.Bot a{background:url(//image.sojump.com/images/WJX/QuestionnaireStencil/ico_folder_bottom.gif) no-repeat 0 0;}
+
+.divMouse{text-align: left}
+.divMouse LI A 
+{
+    PADDING-RIGHT: 6px; PADDING-BOTTOM: 0; MARGIN: 0 0; CURSOR: pointer; padding-left:4px;
+    COLOR: #666; BACKGROUND-REPEAT: no-repeat; TEXT-DECORATION: none;  DISPLAY:  inline-block;  
+}
+ .divMouse LI A:visited 
+{
+    PADDING-RIGHT: 6px; PADDING-BOTTOM: 0; MARGIN: 0 0; CURSOR: pointer; padding-left:4px;
+    COLOR: #666; BACKGROUND-REPEAT: no-repeat; TEXT-DECORATION: none;  DISPLAY:  inline-block;  
+}
+.divMouse LI A:hover 
+{
+     color:#ffffff; background-color:#3366cc; 
+}
+
+
+/*用于问卷推荐服务系列页面的样式*/
+ul.stat_tab {
+  border-bottom: 1px solid #d7d7d7;
+    height: 33px;
+   padding-top:30px;
+   display:block;
+}
+ul.stat_tab li.current
+{
+    border-top:2px solid #00a2ca;
+    border-bottom:1px solid #fff;
+    height:31px;
+    font-weight:600;
+}
+ ul.stat_tab li {
+    border-radius: 2px;
+    color: #666666;
+    display: block;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    margin-left:-1px;
+    text-align: center;
+    font-size:14px;
+    padding:0 16px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+ ul.stat_tab li a,ul.stat_tab li a:visited{
+color: #666666;
+}
+    ul.stat_tab li a:hover {
+        color:#09C;
+    }
+#divTabMenu
+{ height: 24px; width: 840px; margin: 0px auto;border-bottom:4px #0978d5 solid;
+    padding: 0px 0px 0px 0px; background: url(//image.sojump.com/images/html/promotemsg/searchbg01.gif);
+}
+.btnsNormal A
+{
+ DISPLAY: inline; FONT-WEIGHT: bold; margin-left:12px;
+ FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 2px;  CURSOR: pointer; COLOR: #444444! important; 
+ PADDING-TOP: 5px; width:73px;line-height:17px; 
+ TEXT-DECORATION: none; text-align:center;BACKGROUND-IMAGE: url(//image.sojump.com/images/html/promotemsg/searchonbgNo.gif) ;
+}
+.btnsActive A
+{
+ DISPLAY: inline;FONT-WEIGHT: bold; 
+ FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM:2px; CURSOR: pointer; COLOR: #ffffff! important; 
+ PADDING-TOP: 5px;  line-height:17px; width:73px;text-align:center; margin-left:12px! important;
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/html/promotemsg/searchonbg.gif) ; TEXT-DECORATION: none;  
+}
+.btnsNormal A:hover {
+ background-repeat: repeat-x;background: url(//image.sojump.com/images/html/promotemsg/searchonbgHover.gif); color:#05398c! important;line-height:17px; 
+ PADDING-TOP: 5px;PADDING-BOTTOM: 2px;DISPLAY: inline; width:73px;FONT-WEIGHT: bold; text-align:center;FONT-SIZE: 13px;
+}
+.btnsNormal a:visited{color:#444444;}
+
+
+.btnsNormalL A
+{
+ DISPLAY: block; FONT-WEIGHT: bold; margin-left:15px;
+ FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 2px;  CURSOR: pointer; COLOR: #444444! important; 
+ PADDING-TOP: 5px; width:108px;line-height:17px; 
+ TEXT-DECORATION: none; text-align:center;BACKGROUND-IMAGE: url(//image.sojump.com/images/html/promotemsg/searchonbgLNo.gif) ;
+}
+.btnsActiveL A
+{
+ DISPLAY: block;FONT-WEIGHT: bold; 
+ FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM:2px; CURSOR: pointer; COLOR: #ffffff! important; 
+ PADDING-TOP: 5px;  line-height:17px; width:108px;text-align:center; margin-left:15px;
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/html/promotemsg/searchonbgL.gif) ; TEXT-DECORATION: none;  
+}
+.btnsNormalL A:hover {
+ background-repeat: repeat-x;background: url(//image.sojump.com/images/html/promotemsg/searchonbgLHover.gif); color:#05398c! important;line-height:17px; 
+ PADDING-TOP: 5px;PADDING-BOTTOM: 2px;DISPLAY: block; width:108px;FONT-WEIGHT: bold; text-align:center;FONT-SIZE: 13px;
+}
+.btnsNormalL a:visited{color:#444444;}
+
+
+.btnsNormalLL A
+{
+ DISPLAY: block; FONT-WEIGHT: bold; margin-left:15px;
+ FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM: 2px;  CURSOR: pointer; COLOR: #444444! important; 
+ PADDING-TOP: 5px; width:128px;line-height:17px; 
+ TEXT-DECORATION: none; text-align:center;BACKGROUND-IMAGE: url(//image.sojump.com/images/html/promotemsg/searchonbgLLNo.gif) ;
+}
+.btnsActiveLL A
+{
+ DISPLAY: block;FONT-WEIGHT: bold; 
+ FONT-SIZE: 13px; FLOAT: left; PADDING-BOTTOM:2px; CURSOR: pointer; COLOR: #ffffff! important; 
+ PADDING-TOP: 5px;  line-height:17px; width:128px;text-align:center; margin-left:15px;
+ BACKGROUND-IMAGE: url(//image.sojump.com/images/html/promotemsg/searchonbgLL.gif) ; TEXT-DECORATION: none;  
+}
+.btnsNormalLL A:hover {
+ background-repeat: repeat-x;background: url(//image.sojump.com/images/html/promotemsg/searchonbgLLHover.gif); color:#05398c! important;line-height:17px; 
+ PADDING-TOP: 5px;PADDING-BOTTOM: 2px;DISPLAY: block; width:128px;FONT-WEIGHT: bold; text-align:center;FONT-SIZE: 13px;
+}
+.btnsNormalLL a:visited{color:#444444;}
+
+.btns A:active { COLOR: #ffffff; 
+ BACKGROUND-COLOR: #6299c5
+}
+.divPromoteService{ margin:0 auto; width:840px; padding:10px 0 20px; line-height:24px; color:#444444; font-size:13px;}
+.divPromoteService b{ font-size:14px;}
+.fontCheng{color:#ff6600;}
+#succeedcase li{float:left;}
+
+.libg{background-image: url(//image.sojump.com/images/Html/ContactUs/Icon.gif);padding-left:15px; background-repeat: no-repeat;background-position : 0 45%;}
+
+/*企业版自定义域名登录页面*/
+#userlogin_body {
+ PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../Images/wjx/vip/user_all_bg.gif) #226cc5 repeat-x 50% top; PADDING-BOTTOM: 0px; MARGIN: 110px 0px 0px; FONT: 12px/150% Arial, "宋体" ,Helvetica,sans-serif; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+
+#user_login {
+ PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_login DL {
+ PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_login DD {
+ PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_login {
+ MARGIN: 0px auto; WIDTH: 590px
+}
+.user_bottom_c A {
+ COLOR: yellow!important;  
+  text-decoration:none;
+}
+.user_bottom_c A:hover {
+ COLOR: #c00
+}
+
+.tbgrid td,.tbgrid th
+{
+   border:1px solid #DCE0E1;
+}
+
+
+div.bar {
+background:transparent url(//image.sojump.com/images/wjx/viewstat/vote_cl_bar.png) no-repeat scroll 0 0;
+float:left;
+height:16px;
+margin:3px 0 0;
+padding:0 0 0 1px;
+width:152px;
+text-align:left;
+}
+div.bar .precent
+{
+    overflow:hidden;
+}
+div .bar img
+{
+   border:0px;
+   padding:0px;
+}
+/*****************************填写问卷与设计问卷*************
+/*分页与分栏*/
+.div_title_page_question{
+    padding:2px 0; 
+    width:98%; margin:22px auto; clear:both;
+    line-height:20px;
+}
+.div_title_cut_question{
+    padding:2px 0; width:97%;margin:10px auto;
+    line-height:24px;
+}

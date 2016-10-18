@@ -37,7 +37,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	}
 
 	@Override
-	public List<?> getLimitedListByql(String sql, int pageNo, int pageSize, Object... params) {
+	public List<?> getLimitedListBySql(String sql, int pageNo, int pageSize, Object... params) {
 		int start = (pageNo - 1) * pageSize;
 		return getSqlQuery(sql, params).setFirstResult(start).setMaxResults(pageSize).list();
 	}

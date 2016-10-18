@@ -5,7 +5,7 @@ public class Survey {
 	private String name;
 	private boolean completed;
 	private String picPath = "resources/logo.png";
-	private String user;
+	private User user;
 
 	public Integer getId() {
 		return id;
@@ -39,11 +39,11 @@ public class Survey {
 		this.picPath = picPath;
 	}
 
-	public String getUser() {
+	public User getUser() {
 		return user;
 	}
 
-	public void setUser(String user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 

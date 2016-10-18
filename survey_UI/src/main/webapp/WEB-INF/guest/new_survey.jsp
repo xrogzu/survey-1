@@ -7,14 +7,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%@include file="/jsp_res/base.jsp"%>
-<link href="resources/style/nlogin2.css" type="text/css"
-	rel="stylesheet">
 </head>
 <body>
 	<%@include file="/jsp_res/head.jsp"%>
-	<div style="padding:50px ">
+	<div id="bodyDiv">
 		<center>
-			<form action="user/doLogin" method="post">
+			<form action="survey/doAddSurvey" enctype="multipart/form-data"
+				method="post">
 				<table>
 					<c:if test="${requestScope.message!=null }">
 						<tr>
@@ -22,22 +21,22 @@
 						</tr>
 					</c:if>
 					<tr>
-						<td>用户名</td>
-						<td><input type="text" name="name"></td>
+						<td>问卷名称</td>
+						<td ><input type="text" name="name" size="50"></td>
 					</tr>
 					<tr>
-						<td>密码</td>
-						<td><input type="password" name="password"></td>
+						<td>问卷logo</td>
+						<td><input type="file" name="logoFile"></td>
 					</tr>
 					<tr>
 						<td colspan="2" align="center"><input type="submit"
-							value="登录"></td>
+							value="确认"></td>
 					</tr>
 				</table>
 			</form>
 		</center>
-	</div>
 
+	</div>
 	<%@include file="/jsp_res/bottom.jsp"%>
 </body>
 </html>

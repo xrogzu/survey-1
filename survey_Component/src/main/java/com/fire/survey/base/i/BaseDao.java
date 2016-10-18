@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface BaseDao<T> {
 
-	List<?> getLimitedListByql(String sql, int pageNo, int pageSize, Object... params);
+	List<?> getLimitedListBySql(String sql, int pageNo, int pageSize, Object... params);
 
 	List<T> getLimitedListByHql(String hql, int pageNo, int pageSize, Object... params);
 
