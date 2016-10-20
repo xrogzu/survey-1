@@ -36,9 +36,9 @@
 
 	<aop:config>
 		<aop:pointcut
-			expression="execution(* com.fire.survey.component.service.*..*Service(..))"
+			expression="execution(* com.fire.survey.component.service.*.*Service.*(..))"
 			id="myPoint" />
-
+		<aop:advisor advice-ref="myAdvice" pointcut-ref="myPoint" />
 	</aop:config>
 
 	<tx:advice id="myAdvice" transaction-manager="transactionManager">

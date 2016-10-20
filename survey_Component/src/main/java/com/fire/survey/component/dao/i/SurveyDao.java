@@ -13,5 +13,7 @@ public interface SurveyDao extends BaseDao<Survey>{
 	
 	List<Survey> getMyUncompletedList(User user, int pageNo, int pageSize);
 	
-	int getMyUncompletedCount(User user);	
+	int getMyUncompletedCount(User user);
+
+	void updateSurvey(Survey survey);	
 }

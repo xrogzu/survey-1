@@ -11,20 +11,26 @@
 	<%@include file="/jsp_res/head.jsp"%>
 	<div id="bodyDiv">
 		<center>
-			<form:form action="#" method="post" modelAttribute="survey">
+			<form:form action="survey/doEdit" method="post"
+				modelAttribute="survey" enctype="multipart/form-data">
 				<form:hidden path="id" />
 				<form:hidden path="picPath" />
 				<table>
 					<tr>
 						<td>标题</td>
-						<td><form:input path="name" size="28"/></td>
+						<td><form:input path="name" size="28" /></td>
 					</tr>
 					<tr>
 						<td>Logo</td>
+						<td><img src="${requestScope.survey.picPath }"></td>
+					</tr>
+					<tr>
+						<td>上传Logo</td>
 						<td><input type="file" name="logoFile"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="submit" value="确认"></td>
+						<td colspan="2" align="center"><input type="submit"
+							value="确认"></td>
 					</tr>
 				</table>
 

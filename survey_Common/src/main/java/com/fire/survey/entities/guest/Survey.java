@@ -1,14 +1,25 @@
 package com.fire.survey.entities.guest;
 
+import java.util.Set;
+
 public class Survey {
 	private Integer id;
 	private String name;
 	private boolean completed;
 	private String picPath = "resources/logo.png";
 	private User user;
+	private Set<Bag> bagSet;
 
 	public Integer getId() {
 		return id;
+	}
+
+	public Set<Bag> getBagSet() {
+		return bagSet;
+	}
+
+	public void setBagSet(Set<Bag> bagSet) {
+		this.bagSet = bagSet;
 	}
 
 	public void setId(Integer id) {
@@ -45,6 +56,11 @@ public class Survey {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	@Override
+	public String toString() {
+		return "Survey [id=" + id + ", name=" + name + ", completed=" + completed + ", picPath=" + picPath + "]";
 	}
 
 }

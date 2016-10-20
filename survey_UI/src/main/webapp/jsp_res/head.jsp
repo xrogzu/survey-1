@@ -21,14 +21,13 @@
 			<c:if test="${sessionScope.loginUser != null }">
 				<div class="W-Menu">
 					<ul>
-						<li id="ctl00_liIndex" class="acitve"><a href="index.jsp"
-							title="问卷星首页">欢迎您，${sessionScope.loginUser.name }</a></li>
+						<li id="ctl00_liIndex" class="acitve"><a href="index.jsp">欢迎您，${sessionScope.loginUser.name }</a></li>
 						<li id="ctl00_liQCenter"><a title="退出登录" href="user/logout">退出</a></li>
 						<li id="ctl00_liPrice"><a
 							href="survey/engage/showAllAviabelSurvey" title="参与调查">参与调查</a></li>
 						<c:if test="${sessionScope.loginUser.company }">
-							<li id="ctl00_liUseCase"><a href="survey/addSurvey"
-								title="邀请问卷星样本库中的会员回答您的问卷，快速回收到所需数据"> 新建问卷</a></li>
+							<li id="ctl00_liUseCase"><a href="survey/addSurvey">
+									新建问卷</a></li>
 							<li id="ctl00_liCustomer" style="margin-right: 0;"><a
 								href="survey/completeSurvey" title="未完成的问卷"> 完善</a></li>
 						</c:if>

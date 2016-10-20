@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-19 13:06:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.fire.survey.entities.guest.Bag" table="SURVEY_BAG">
+		<id name="bagId" type="java.lang.Integer">
+			<column name="BAG_ID" />
+			<generator class="native" />
+		</id>
+		<property name="bagName" type="java.lang.String">
+			<column name="BAG_NAME" />
+		</property>
+		<property name="bagOrder" type="int">
+			<column name="BAG_ORDER" />
+		</property>
+		<many-to-one name="survey" class="com.fire.survey.entities.guest.Survey"
+			fetch="join">
+			<column name="SURVEY_ID" />
+		</many-to-one>
+		<set name="questionSet" table="SURVEY_QUESTION" inverse="true"
+			fetch="join" cascade="delete">
+			<key column="BAG_ID"></key>
+			<one-to-many class="com.fire.survey.entities.guest.Question" />
+		</set>
+	</class>
+</hibernate-mapping>

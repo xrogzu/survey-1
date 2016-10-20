@@ -10,6 +10,7 @@
 	<%@include file="/jsp_res/head.jsp"%>
 	<div style="font-size: large;">
 		<center>
+		<p style="color: red;">${requestScope.message }</p>
 			<c:if test="${empty requestScope.page.list }">
 				<h4>尚未创建问卷</h4>
 			</c:if>
@@ -27,10 +28,10 @@
 							<td>${survey.name }</td>
 							<td><img alt="Logo" height="80px" src="${survey.picPath }"></td>
 							<td><a href="survey/design/${survey.id}">设计</a></td>
-							<td><a href="survey/edit/${survey.id}">更新</a></td>
-							<td><a href="survey/delete/${survey.id}">删除</a></td>
+							<td><a href="survey/edit/${survey.id}/${requestScope.page.pageNo}">更新</a></td>
+							<td><a href="survey/delete/${survey.id}/${requestScope.page.pageNo}">删除</a></td>
 							<td><a
-								href="survey/doDelete/${survey.id}/${requestScope.page.pageNo}">彻底删除</a></td>
+								href="survey/doDelete/${survey.id}/${requestScope.page.pageNo}" style="background: black;color: yellow">彻底删除</a></td>
 						</tr>
 					</c:forEach>
 				</table>

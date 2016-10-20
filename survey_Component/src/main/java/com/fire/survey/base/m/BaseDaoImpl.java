@@ -32,8 +32,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	}
 
 	public Session getSession() {
-		return sesssionFactory.openSession();
-		// return sesssionFactory.getCurrentSession();
+		return sesssionFactory.getCurrentSession();
 	}
 
 	@Override

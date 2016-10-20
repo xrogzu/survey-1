@@ -15,8 +15,7 @@ import com.fire.survey.utils.Page;
 public class SurveyServiceImpl implements SurveyService {
 	@Autowired
 	private SurveyDao surveyDao;
-	
-	
+
 	@Override
 	public void save(String name, String path, User user) {
 		Survey survey = new Survey();
@@ -40,13 +39,20 @@ public class SurveyServiceImpl implements SurveyService {
 	}
 
 	@Override
-	public void removieSurvey(Integer id) {
-		surveyDao.removeEntityById(id);
+	public void removieSurvey(Survey survey) {
+		surveyDao.removeEntity(survey);
 	}
-
+	
+	
+	
 	@Override
 	public Survey getSurveyById(Integer id) {
 		return surveyDao.getEntityById(id);
+	}
+
+	@Override
+	public void updateSurvey(Survey survey) {
+		surveyDao.updateSurvey(survey);
 	}
 
 }

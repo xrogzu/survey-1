@@ -30,4 +30,10 @@ public class SurveyDaoImpl extends BaseDaoImpl<Survey> implements SurveyDao {
 		return getCountByHql(hql, user);
 	}
 
+	@Override
+	public void updateSurvey(Survey survey) {
+		String hql = "UPDATE Survey s SET s.name = ?,s.picPath = ? WHERE s.id = ? ";
+		updateEntityByHql(hql, survey.getName(), survey.getPicPath(), survey.getId());
+	}
+
 }

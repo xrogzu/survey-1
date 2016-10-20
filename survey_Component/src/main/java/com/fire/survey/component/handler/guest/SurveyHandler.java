@@ -26,16 +26,51 @@ public class SurveyHandler {
 	@Autowired
 	private SurveyService surveyService;
 
-	@RequestMapping("/edit/{id}")
-	public String edit(@PathVariable("id") Integer id, Map<String, Object> map) {
+	@RequestMapping("/design/{id}")
+	public String design(@PathVariable("id") Integer id, Map<String, Object> map) {
+		Survey survey = surveyService.getSurveyById(id);
+		map.put("survey", survey);
+		return "guest/design_survey";
+	}
+
+	@RequestMapping("/doEdit")
+	public String doEdit(Survey survey, @RequestParam(value = "logoFile") MultipartFile file,
+			HttpServletRequest request) throws IOException {
+		if (file.getContentType().startsWith("image")) {
+			String path = request.getServletContext().getRealPath("pics");
+			String oName = file.getOriginalFilename();
+			String type = oName.substring(oName.lastIndexOf("."));
+			String picPath = DataProcess.resizeImages(file.getInputStream(), path, type);
+			survey.setPicPath(picPath);
+		}
+		surveyService.updateSurvey(survey);
+		return "redirect:/survey/completeSurvey";
+	}
+
+	@RequestMapping("/edit/{id}/{pageStr}")
+	public String edit(@PathVariable("id") Integer id, @PathVariable("pageStr") String str, Map<String, Object> map) {
 		Survey survey = surveyService.getSurveyById(id);
 		map.put("survey", survey);
 		return "guest/edit_survey";
 	}
 
+	@RequestMapping("/delete/{id}/{pageStr}")
+	public String delete(@PathVariable("id") Integer id, @PathVariable("pageStr") String str,
+			HttpServletRequest request) {
+		Survey survey = new Survey();
+		survey.setId(id);
+		try {
+			surveyService.removieSurvey(survey);
+		} catch (Exception e) {
+			request.setAttribute("message", "调查不为空");
+			return showAllSurvey(str, request);
+		}
+		return "redirect:/survey/completeSurvey?pageStr=" + str;
+	}
+
 	@RequestMapping("/doDelete/{id}/{pageStr}")
 	public String doDelete(@PathVariable("id") Integer id, @PathVariable("pageStr") String str) {
-		surveyService.removieSurvey(id);
+		surveyService.removieSurvey(surveyService.getSurveyById(id));
 		return "redirect:/survey/completeSurvey?pageStr=" + str;
 	}
 
@@ -54,7 +89,7 @@ public class SurveyHandler {
 		if (multipartFile.isEmpty()) {
 			User user = (User) request.getSession().getAttribute(ConstanName.LOGIN_USER);
 			surveyService.save(name, null, user);
-			return "redirect://survey/completeSurvey";
+			return "redirect:/survey/completeSurvey";
 		}
 
 		boolean b = multipartFile.getContentType().startsWith("image");

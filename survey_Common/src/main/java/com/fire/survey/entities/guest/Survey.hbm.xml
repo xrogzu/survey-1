@@ -21,5 +21,10 @@
 			fetch="join">
 			<column name="USER_ID" />
 		</many-to-one>
+		<set name="bagSet" table="SURVEY_BAG" inverse="true" fetch="join"
+			order-by="bagOrder" cascade="delete">
+			<key column="SURVEY_ID"></key>
+			<one-to-many class="com.fire.survey.entities.guest.Bag" />
+		</set>
 	</class>
 </hibernate-mapping>

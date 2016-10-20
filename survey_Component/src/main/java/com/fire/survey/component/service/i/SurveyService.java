@@ -10,8 +10,10 @@ public interface SurveyService {
 
 	Page<Survey> getMyUnCompleted(User user, String pageNoStr);
 
-	void removieSurvey(Integer id);
+	void removieSurvey(Survey survey);
 
 	Survey getSurveyById(Integer id);
+
+	void updateSurvey(Survey survey);
 
 }
