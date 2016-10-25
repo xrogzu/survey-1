@@ -100,4 +100,9 @@ public class DataProcess {
 		}
 		return buffer.toString();
 	}
+
+	public static String pathHandler(String path) {
+		String regex = "/\\d.*$";
+		return path.replaceAll(regex, "");
+	}
 }

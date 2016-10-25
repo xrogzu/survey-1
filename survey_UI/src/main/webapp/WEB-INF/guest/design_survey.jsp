@@ -13,12 +13,15 @@
 	<div id="bodyDiv" style="font-size: larger;">
 		<center>
 			设计调查<br>调查基本信息
+			<c:if test="${!empty requestScope.message}">
+				<h4 style="color: red;">${requestScope.message }</h4>
+			</c:if>
 			<table>
 				<tr>
 					<td colspan="2"><img src="${survey.picPath }"></td>
 					<td>${survey.name }</td>
 					<td><a href="bag/addBag/${survey.id}">创建包裹</a></td>
-					<td colspan="2"><a href="bag/toAdjustUI/${survey.id}">调整包裹顺序</a></td>
+					<td colspan="2"><a href="survey/toAdjustOrder/${survey.id}">调整包裹顺序</a></td>
 				</tr>
 				<tr>
 					<td colspan="6">包裹基本信息</td>
@@ -38,8 +41,47 @@
 								style="background: black; color: yellow;">深度删除</a></td>
 							<td><a href="bag/move/${bag.bagId }/${survey.id}">移动/复制包裹</a></td>
 						</tr>
+						<c:if test="${empty  bag.questionSet}">
+							<tr>
+								<td colspan="6" align="center">尚未创建问题</td>
+							</tr>
+						</c:if>
+						<c:if test="${!empty  bag.questionSet}">
+							<tr>
+								<td></td>
+								<td colspan="3" align="center">问题详情</td>
+								<td colspan="2" align="center">问题操作</td>
+							</tr>
+
+							<c:forEach items="${bag.questionSet }" var="question">
+								<tr>
+									<td></td>
+									<td>${question.questionName }</td>
+									<td colspan="2"><c:if test="${question.questionType==0 }">
+											<c:forEach items="${question.showOptions }" var="op">
+												<input type="radio" name="_op${question.questionId }" />${op } 
+										</c:forEach>
+										</c:if> <c:if test="${question.questionType==1 }">
+											<c:forEach items="${question.showOptions }" var="op">
+												<input type="checkbox" />${op } 
+										</c:forEach>
+										</c:if> <c:if test="${question.questionType==2 }">
+											<input type="text" />
+										</c:if></td>
+									<td><a
+										href="question/remove/${question.questionId}/${survey.id}">删除问题</a></td>
+									<td><a
+										href="question/update/${question.questionId}/${survey.id}">更新问题</a></td>
+
+								</tr>
+							</c:forEach>
+						</c:if>
 					</c:forEach>
 				</c:if>
+				<tr>
+					<td colspan="6" align="center"><a
+						href="survey/doComplete/${survey.id}">完成调查</a></td>
+				</tr>
 			</table>
 		</center>
 

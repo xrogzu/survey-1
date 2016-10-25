@@ -20,6 +20,11 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		set.add("/user/doLogin");
 		set.add("/user/doRegist");
 		set.add("/user/logout");
+		set.add("/admin/doLogin");
+		set.add("/admin/logout");
+		set.add("/admin/login");
+		set.add("/manage/manage_login.jsp");
+		
 	}
 
 	@Override
@@ -32,11 +37,23 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		if (set.contains(path)) {
 			return true;
 		}
-		if (request.getSession().getAttribute(ConstanName.LOGIN_USER) != null) {
+
+		if (!path.startsWith("/manage/")) {
+			if (request.getSession().getAttribute(ConstanName.LOGIN_USER) != null) {
+				return true;
+			} else {
+				request.setAttribute("message", "请登录后在进行操作！");
+				request.getRequestDispatcher("/WEB-INF/guest/user_login.jsp").forward(request, response);
+				return false;
+			}
+		} else if (request.getSession().getAttribute("loginAdmin") != null) {
 			return true;
+		} else
+
+		{
+			request.setAttribute("message", "请登录后在进行操作！");
+			request.getRequestDispatcher("/WEB-INF/guest/user_login.jsp").forward(request, response);
+			return false;
 		}
-		request.setAttribute("message", "请登录后在进行操作！");
-		request.getRequestDispatcher("/WEB-INF/guest/user_login.jsp").forward(request, response);
-		return false;
 	}
 }

@@ -1,6 +1,8 @@
 package com.fire.survey.component.handler.guest;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.fire.survey.component.service.i.BagService;
 import com.fire.survey.component.service.i.SurveyService;
 import com.fire.survey.entities.guest.Survey;
 import com.fire.survey.entities.guest.User;
@@ -22,9 +25,34 @@ import com.fire.survey.utils.Page;
 @Controller
 @RequestMapping("/survey")
 public class SurveyHandler {
-	// 图片压缩
 	@Autowired
 	private SurveyService surveyService;
+	@Autowired
+	private BagService bagService;
+
+	@RequestMapping("/doComplete/{surveyId}")
+	public String doComplete(@PathVariable("surveyId") Integer surveyId, Map<String, Object> map) {
+		boolean b = surveyService.doComplete(surveyId);
+		if (!b) {
+			map.put("message", "调查里含有空的包裹");
+			return design(surveyId, map);
+		}
+		return "redirect:/index.jsp";
+	}
+
+	@RequestMapping("/doAdjust/{surveyId}")
+	public String doAdjust(@PathVariable("surveyId") Integer surveyId, @RequestParam("orderId") List<Integer> orderIds,
+			@RequestParam("order") List<Integer> orders, Map<String, Object> map) {
+		bagService.batchUpdateOrder(orderIds, orders);
+		return design(surveyId, map);
+	}
+
+	@RequestMapping("/toAdjustOrder/{surveyId}")
+	public String adjustOrder(@PathVariable("surveyId") Integer id, Map<String, Object> map) {
+		Survey survey = surveyService.getSurveyById(id);
+		map.put("bags", new ArrayList<>(survey.getBagSet()));
+		return "guest/bag_adjustOrder";
+	}
 
 	@RequestMapping("/design/{id}")
 	public String design(@PathVariable("id") Integer id, Map<String, Object> map) {

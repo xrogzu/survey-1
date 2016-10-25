@@ -16,7 +16,8 @@ public class BagHandler {
 
 	@Autowired
 	private BagService bagService;
-
+	
+	
 	@RequestMapping("/doUpdate")
 	public String doUpdate(Bag bag) {
 		bagService.update(bag);

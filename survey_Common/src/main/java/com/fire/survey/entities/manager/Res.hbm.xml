@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-25 17:25:23 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.fire.survey.entities.manager.Res" table="SURVEY_RES">
+        <id name="resId" type="java.lang.Integer">
+            <column name="RES_ID" />
+            <generator class="native" />
+        </id>
+        <property name="servletPath" type="java.lang.String">
+            <column name="SERVLET_PATH" />
+        </property>
+        <property name="resCode" type="java.lang.Integer">
+            <column name="RES_CODE" />
+        </property>
+        <property name="resPos" type="java.lang.Integer">
+            <column name="RES_POS" />
+        </property>
+        <property name="publicStatus" type="boolean">
+            <column name="PUBLIC_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

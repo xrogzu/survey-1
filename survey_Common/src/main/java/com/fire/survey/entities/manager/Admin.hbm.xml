@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-24 11:26:36 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.fire.survey.entities.manager.Admin" table="SURVEY_ADMIN">
+		<id name="adminId" type="java.lang.Integer">
+			<column name="ADMIN_ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="adminName" type="java.lang.String">
+			<column name="ADMIN_NAME" />
+		</property>
+		<property name="adminPwd" type="java.lang.String">
+			<column name="ADMIN_PWD" />
+		</property>
+	</class>
+</hibernate-mapping>

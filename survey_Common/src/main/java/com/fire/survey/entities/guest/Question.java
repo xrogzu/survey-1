@@ -36,6 +36,13 @@ public class Question {
 		return options;
 	}
 
+	public String[] getShowOptions() {
+		return options.split(",");
+	}
+	public String getEditOptions() {
+		return options.replaceAll(",", "\r\n");
+	}
+
 	public void setOptions(String options) {
 		this.options = options;
 	}

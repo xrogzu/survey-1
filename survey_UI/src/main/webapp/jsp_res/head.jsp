@@ -23,8 +23,8 @@
 					<ul>
 						<li id="ctl00_liIndex" class="acitve"><a href="index.jsp">欢迎您，${sessionScope.loginUser.name }</a></li>
 						<li id="ctl00_liQCenter"><a title="退出登录" href="user/logout">退出</a></li>
-						<li id="ctl00_liPrice"><a
-							href="survey/engage/showAllAviabelSurvey" title="参与调查">参与调查</a></li>
+						<li id="ctl00_liPrice"><a href="engage/showAllAviabelSurvey"
+							title="参与调查">参与调查</a></li>
 						<c:if test="${sessionScope.loginUser.company }">
 							<li id="ctl00_liUseCase"><a href="survey/addSurvey">
 									新建问卷</a></li>

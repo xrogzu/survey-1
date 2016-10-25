@@ -16,4 +16,9 @@ public interface SurveyService {
 
 	void updateSurvey(Survey survey);
 
+	boolean doComplete(Integer surveyId);
+
+
+	Page<Survey> getAllCompletedSurvey(String pageStr);
+
 }

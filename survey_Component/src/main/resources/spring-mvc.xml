@@ -25,12 +25,13 @@
 	</bean>
 	<mvc:interceptors>
 		<bean class="com.fire.survey.tinterceptors.LoginInterceptor" />
+		<bean class="com.fire.survey.tinterceptors.PathAddInterceptor" />
 	</mvc:interceptors>
 
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
 	<mvc:view-controller path="/user/login" view-name="guest/user_login" />
 	<mvc:view-controller path="/user/regist" view-name="guest/user_regist" />
-	<mvc:view-controller path="/survey/addSurvey"
-		view-name="/guest/new_survey" />
+	<mvc:view-controller path="/survey/addSurvey" view-name="/guest/new_survey" />
+	<mvc:view-controller path="/manager/admin/toMainUI" view-name="/manage/manage_login" />
 </beans>

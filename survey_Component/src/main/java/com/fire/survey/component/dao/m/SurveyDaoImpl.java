@@ -36,4 +36,17 @@ public class SurveyDaoImpl extends BaseDaoImpl<Survey> implements SurveyDao {
 		updateEntityByHql(hql, survey.getName(), survey.getPicPath(), survey.getId());
 	}
 
+	@Override
+	public int getCompletedCount() {
+
+		String hql = "Select Count(*) from Survey s where s.completed = ?";
+		return getCountByHql(hql, true);
+	}
+
+	@Override
+	public List<Survey> getLimitedCompletedSurvey(int pageNo, int pageSize) {
+		String hql = "From Survey s where s.completed = ?";
+		return getLimitedListByHql(hql, pageNo, pageSize, true);
+	}
+
 }

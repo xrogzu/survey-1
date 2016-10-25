@@ -19,7 +19,7 @@
 			<column name="SURVEY_ID" />
 		</many-to-one>
 		<set name="questionSet" table="SURVEY_QUESTION" inverse="true"
-			fetch="join" cascade="delete">
+			fetch="join" cascade="delete" order-by="questionId">
 			<key column="BAG_ID"></key>
 			<one-to-many class="com.fire.survey.entities.guest.Question" />
 		</set>
