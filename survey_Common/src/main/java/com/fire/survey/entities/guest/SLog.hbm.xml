@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-28 12:36:58 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.fire.survey.entities.guest.SLog" table="SURVEY_SLOG">
+		<id name="logId" type="java.lang.Integer">
+			<column name="LOG_ID" />
+			<generator class="native" />
+		</id>
+		<property name="operator" type="java.lang.String">
+			<column name="OPERATOR" />
+		</property>
+		<property name="operateTime" type="java.lang.String">
+			<column name="OPERATE_TIME" />
+		</property>
+		<property name="methodName" type="java.lang.String">
+			<column name="METHOD_NAME" />
+		</property>
+		<property name="typeName" type="java.lang.String">
+			<column name="TYPE_NAME" />
+		</property>
+		<property name="paramList" type="java.lang.String">
+			<column name="PARAM_LIST" />
+		</property>
+		<property name="returnValue" type="java.lang.String">
+			<column name="RETURN_VALUE" />
+		</property>
+		<property name="exceptionType" type="java.lang.String">
+			<column name="EXCEPTION_TYPE" />
+		</property>
+		<property name="exceptionMessage" type="java.lang.String">
+			<column name="EXCEPTION_MESSAGE" />
+		</property>
+	</class>
+</hibernate-mapping>
