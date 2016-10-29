@@ -9,4 +9,10 @@ import com.fire.survey.entities.guest.SLog;
 @Repository
 public class SLogDaoImpl extends BaseDaoImpl<SLog> implements SLogDao {
 
+	@Override
+	public void createTable(String tableName) {
+		String sql = "CREATE TABLE IF NOT EXISTS " + tableName + " LIKE	`survey_slog`";
+		getSqlQuery(sql).executeUpdate();
+	}
+
 }

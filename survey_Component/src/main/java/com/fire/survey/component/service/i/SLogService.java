@@ -4,4 +4,6 @@ import com.fire.survey.entities.guest.SLog;
 
 public interface SLogService {
 	 void save(SLog sLog);
+
+	void createTable(String tableName);
 }

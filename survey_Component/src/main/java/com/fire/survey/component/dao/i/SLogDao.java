@@ -5,4 +5,6 @@ import com.fire.survey.entities.guest.SLog;
 
 public interface SLogDao extends BaseDao<SLog>{
 
+	void createTable(String tableName);
+
 }

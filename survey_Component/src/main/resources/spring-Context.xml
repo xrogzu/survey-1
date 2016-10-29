@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
@@ -34,6 +34,34 @@
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 配置监听器 -->
+	<bean class="com.fire.survey.model.quarz.LogListener" />
+
+	<!-- 配置石英任务的细节 -->
+	<bean id="jobDetailBean"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.fire.survey.model.quarz.LogQuartzJobBean" />
+		<property name="jobDataMap">
+			<map>
+				<entry key="sLogService" value-ref="SLogServiceImpl" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- 配置石英任务触发器 -->
+	<bean id="cronTriggerFactoryBean"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="jobDetailBean" />
+		<property name="cronExpression" value="* * * * * ?"></property>
+	</bean>
+	<!-- 配置石英任务调度的工厂bean -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTriggerFactoryBean" />
+			</list>
+		</property>
 	</bean>
 
 	<bean id="recordLog" class="com.fire.survey.tinterceptors.RecordLog"></bean>

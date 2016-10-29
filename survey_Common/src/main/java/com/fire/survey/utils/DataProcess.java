@@ -7,14 +7,24 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.UUID;
 
 import javax.imageio.ImageIO;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+
 import com.sun.image.codec.jpeg.JPEGCodec;
+import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 @SuppressWarnings("restriction")
 public class DataProcess {
+
+	public static String generateTableName(int offset) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.MONTH, offset);
+		return "auto_log_" + new SimpleDateFormat("yyyy_MM").format(calendar.getTime());
+	}
+
 	public static String resizeImages(InputStream inputStream, String realPath, String type) {
 
 		OutputStream out = null;

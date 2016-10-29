@@ -17,4 +17,9 @@ public class SLogServiceImpl implements SLogService {
 		sLogDao.saveEntity(sLog);
 	}
 
+	@Override
+	public void createTable(String tableName) {
+		sLogDao.createTable(tableName);
+	}
+
 }
