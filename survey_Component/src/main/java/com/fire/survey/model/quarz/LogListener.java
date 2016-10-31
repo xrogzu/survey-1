@@ -6,6 +6,8 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
 import com.fire.survey.component.service.i.SLogService;
+import com.fire.survey.router.MyRoutingDataSource;
+import com.fire.survey.router.RouterKeyBinder;
 import com.fire.survey.utils.DataProcess;
 
 public class LogListener implements ApplicationListener<ContextRefreshedEvent> {
@@ -20,6 +22,7 @@ public class LogListener implements ApplicationListener<ContextRefreshedEvent> {
 		if(ioc.getParent()==null){
 			for (int i = 0; i < 3; i++) {
 				String tableName = DataProcess.generateTableName(i);
+				RouterKeyBinder.bindKey(MyRoutingDataSource.LOG);
 				sLogService.createTable(tableName);
 			}
 		}

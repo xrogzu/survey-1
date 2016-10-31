@@ -15,17 +15,34 @@
 	</context:component-scan>
 
 	<context:property-placeholder location="classpath:db.properties" />
+	<!--配置路由数据源  -->
 
-
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+	<bean id="commonDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="user" value="${jdbc.user}" />
 		<property name="password" value="${jdbc.password}" />
 		<property name="jdbcUrl" value="${jdbc.url}" />
 		<property name="driverClass" value="${jdbc.driverClass}" />
 	</bean>
+	<bean id="logDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="user" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="jdbcUrl" value="${log.url}" />
+		<property name="driverClass" value="${jdbc.driverClass}" />
+	</bean>
+	
+	<bean id="dataSourceRouter" class="com.fire.survey.router.MyRoutingDataSource">
+   <property name="targetDataSources">
+     <map>
+       <entry key="common" value-ref="commonDataSource"/>
+       <entry key="log" value-ref="logDataSource"/>
+     </map>
+   </property>
+   <property name="defaultTargetDataSource" ref="commonDataSource"/>
+ </bean>
+	
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
+		<property name="dataSource" ref="dataSourceRouter" />
 		<property name="configLocations" value="classpath:hibernate.cfg.xml" />
 		<property name="mappingLocations"
 			value="classpath:com/fire/survey/entities/*/*.hbm.xml" />
@@ -63,6 +80,8 @@
 			</list>
 		</property>
 	</bean>
+
+	
 
 	<bean id="recordLog" class="com.fire.survey.tinterceptors.RecordLog"></bean>
 

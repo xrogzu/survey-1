@@ -14,6 +14,8 @@ import com.fire.survey.component.service.i.SLogService;
 import com.fire.survey.entities.guest.SLog;
 import com.fire.survey.entities.guest.User;
 import com.fire.survey.entities.manager.Admin;
+import com.fire.survey.router.MyRoutingDataSource;
+import com.fire.survey.router.RouterKeyBinder;
 import com.fire.survey.utils.RequestBinder;
 
 public class RecordLog {
@@ -57,6 +59,7 @@ public class RecordLog {
 			operator = username + "/" + adminname;
 			SLog sLog = new SLog(null, operator, operateTime, methodName, typeName, paramList, returnValue,
 					exceptionType, exceptionMessage);
+			RouterKeyBinder.bindKey(MyRoutingDataSource.LOG);
 			sLogService.save(sLog);
 		}
 		return result;
